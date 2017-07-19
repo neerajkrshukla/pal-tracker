@@ -16,15 +16,22 @@ import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import org.springframework.boot.actuate.metrics.CounterService;
+import org.springframework.boot.actuate.metrics.GaugeService;
 
 public class TimeEntriesControllerTest {
     TimeEntryRepository timeEntryRepository;
     TimeEntriesController controller;
+    CounterService counterService;
+    GaugeService gaugeService;
+
 
     @Before
     public void setUp() throws Exception {
         timeEntryRepository = mock(TimeEntryRepository.class);
-        controller = new TimeEntriesController(timeEntryRepository);
+        counterService = mock(CounterService.class);
+        gaugeService = mock(GaugeService.class);
+        controller = new TimeEntriesController(timeEntryRepository, counterService, gaugeService);
     }
 
     @Test
