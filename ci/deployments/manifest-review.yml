@@ -3,3 +3,5 @@ applications:
 - name: pal-tracker-review
   path: ../../build/libs/pal-tracker.jar
   host: nks-pal-tracker-review
+  env:
+    MANAGEMENT_SECURITY_ENABLED: false
