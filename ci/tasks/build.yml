@@ -14,7 +14,7 @@ outputs:
   - name: build-output
 
 run:
-  path: sh
+  path: bash
   args:
   - -exc
   - |
