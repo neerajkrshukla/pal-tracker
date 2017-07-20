@@ -5,3 +5,4 @@ applications:
   host: nks-pal-tracker-review
   env:
     MANAGEMENT_SECURITY_ENABLED: false
+    SECURITY_FORCE_HTTPS: true
